@@ -1,0 +1,47 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\Ivan\\RiderProjects\\WatchWithMeCore\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+    "projectName": "BusinessLogicLayer",
+    "projectPath": "C:\\Users\\Ivan\\RiderProjects\\WatchWithMeCore\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+    "outputPath": "C:\\Users\\Ivan\\RiderProjects\\WatchWithMeCore\\BusinessLogicLayer\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "C:\\Users\\Ivan\\RiderProjects\\WatchWithMeCore\\DataAccessLayer\\DataAccessLayer.csproj": {
+            "projectPath": "C:\\Users\\Ivan\\RiderProjects\\WatchWithMeCore\\DataAccessLayer\\DataAccessLayer.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
