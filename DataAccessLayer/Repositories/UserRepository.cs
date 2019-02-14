@@ -3,7 +3,7 @@ using DataAccessLayer.EF;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces;
 
-namespace DataAccessLayer.Repository
+namespace DataAccessLayer.Repositories
 {
     public class UserRepository: IRepository<User>
     {

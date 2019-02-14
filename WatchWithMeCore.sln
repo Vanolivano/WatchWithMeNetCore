@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{A5693325-E852-49B1-A9B5-6EE3E4BD89D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A5693325-E852-49B1-A9B5-6EE3E4BD89D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5693325-E852-49B1-A9B5-6EE3E4BD89D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5693325-E852-49B1-A9B5-6EE3E4BD89D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

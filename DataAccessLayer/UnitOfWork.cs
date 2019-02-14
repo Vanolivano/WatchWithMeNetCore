@@ -1,7 +1,7 @@
 using DataAccessLayer.EF;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces;
-using DataAccessLayer.Repository;
+using DataAccessLayer.Repositories;
 
 namespace DataAccessLayer
 {
@@ -16,7 +16,7 @@ namespace DataAccessLayer
             DataBase = new DatabaseContext();
         }
 
-        public IRepository<User> Players
+        public IRepository<User> Users
         {
             get
             {
@@ -25,7 +25,7 @@ namespace DataAccessLayer
                 return _usersRepository;
             }
         }
-        public IRepository<Room> Games
+        public IRepository<Room> Rooms
         {
             get
             {

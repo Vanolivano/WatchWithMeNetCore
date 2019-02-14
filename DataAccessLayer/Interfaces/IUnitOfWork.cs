@@ -5,8 +5,8 @@ namespace DataAccessLayer.Interfaces
 {
     public interface IUnitOfWork: IDisposable
     {
-        IRepository<User> Players { get; }
-        IRepository<Room> Games { get; }
+        IRepository<User> Users { get; }
+        IRepository<Room> Rooms { get; }
         void Save();
     }
 }
