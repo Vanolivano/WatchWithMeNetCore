@@ -3,16 +3,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.EF
 {
-    public partial class WatchWithMeContext : DbContext
+    public partial class DatabaseContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Room> Rooms { get; set; }
         
-        public WatchWithMeContext()
+        public DatabaseContext()
         {
         }
 
-        public WatchWithMeContext(DbContextOptions<WatchWithMeContext> options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
         {
         }

@@ -7,9 +7,9 @@ namespace DataAccessLayer.Repository
 {
     public class RoomRepository: IRepository<Room>
     {
-        private readonly WatchWithMeContext _dbContext;
+        private readonly DatabaseContext _dbContext;
 
-        public RoomRepository(WatchWithMeContext dbContext)
+        public RoomRepository(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }

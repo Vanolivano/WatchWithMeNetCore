@@ -7,13 +7,13 @@ namespace DataAccessLayer
 {
     public class UnitOfWork: IUnitOfWork
     {
-        private WatchWithMeContext DataBase { get; }
+        private DatabaseContext DataBase { get; }
         private UserRepository _usersRepository;
         private RoomRepository _roomsRepository;
 
         public UnitOfWork()
         {
-            DataBase = new WatchWithMeContext();
+            DataBase = new DatabaseContext();
         }
 
         public IRepository<User> Players
@@ -34,6 +34,15 @@ namespace DataAccessLayer
                 return _roomsRepository;
             }
         }
+//        public IRepository<T> GetRepository<T>() where T : class
+//        {
+//            
+//                if (_roomsRepository == null)
+//                    _roomsRepository = new RoomRepository(DataBase);
+//                return _roomsRepository;
+//                return new RepositoryFactory<T>(_ctx).GetRepositoryInstance();
+//            
+//        }
        
         public void Save()
         {

@@ -7,9 +7,9 @@ namespace DataAccessLayer.Repository
 {
     public class UserRepository: IRepository<User>
     {
-        private readonly WatchWithMeContext _dbContext;
+        private readonly DatabaseContext _dbContext;
 
-        public UserRepository(WatchWithMeContext dbContext)
+        public UserRepository(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
