@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Xml.Linq;
 using BusinessLogicLayer.Domains;
-using DataAccessLayer;
-using DataAccessLayer.EF;
+using BusinessLogicLayer.EF;
 using DataAccessLayer.UnitOfWork;
 
 namespace BusinessLogicLayer
@@ -13,9 +13,12 @@ namespace BusinessLogicLayer
         {
             using (IUnitOfWork uow = new UnitOfWork(new DatabaseContext()))
             {
-                uow.GetRepository<DataAccessLayer.Entities.User>().Add(new User{Login = "Vano", Password = "12123123"});
+                uow.GetRepository<Room>().Add(new Room{Name = "Столовая"});
+                uow.GetRepository<User>().Add(new User{Login = "Vano", Password = "12123123", RoomId = 1});
                 uow.Save();
-                var users = uow.GetRepository<DataAccessLayer.Entities.User>().GetAll().ToList();
+                var users = uow.GetRepository<User>().GetAll().ToList();
+                var rooms = uow.GetRepository<Room>().GetAll().ToList();
+                //var users2 = uow.GetRepository<User>().GetAll(includeProperties: nameof(User.Rooms)).ToList();
             }
             Console.WriteLine("Hello World!");
         }

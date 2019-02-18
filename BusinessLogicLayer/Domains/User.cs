@@ -1,13 +1,12 @@
 namespace BusinessLogicLayer.Domains
 {
-    public class User: DataAccessLayer.Entities.User
+    public class User
     {
-        public User(DataAccessLayer.Entities.User item)
-        {
-            Id = item.Id;
-            Login = item.Login;
-            Password = item.Password;
-        }
-        public User(){}
+        public int Id { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        
+        public Room Room { get; set; }
+        public int RoomId { get; set; }
     }
 }

@@ -1,7 +1,7 @@
-﻿using DataAccessLayer.Entities;
+﻿using BusinessLogicLayer.Domains;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccessLayer.EF
+namespace BusinessLogicLayer.EF
 {
     public partial class DatabaseContext : DbContext
     {
@@ -10,6 +10,10 @@ namespace DataAccessLayer.EF
         
         public DatabaseContext()
         {
+            base.Database.EnsureDeleted();
+            base.Database.EnsureCreated();
+            //base.Database.Migrate();
+            
         }
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
@@ -28,7 +32,8 @@ namespace DataAccessLayer.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("ProductVersion", "3.0.0-preview.19074.3");
+//            modelBuilder.HasAnnotation("ProductVersion", "3.0.0-preview.19074.3");
+            
         }
     }
 }
