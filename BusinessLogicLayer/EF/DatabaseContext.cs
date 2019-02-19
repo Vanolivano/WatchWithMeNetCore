@@ -10,8 +10,8 @@ namespace BusinessLogicLayer.EF
         
         public DatabaseContext()
         {
-            base.Database.EnsureDeleted();
-            base.Database.EnsureCreated();
+//            base.Database.EnsureDeleted();
+//            base.Database.EnsureCreated();
             //base.Database.Migrate();
             
         }

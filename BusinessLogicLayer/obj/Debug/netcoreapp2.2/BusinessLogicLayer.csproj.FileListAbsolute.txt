@@ -1,6 +1,4 @@
 C:\Users\Ivan\RiderProjects\WatchWithMeCore\BusinessLogicLayer\bin\Debug\netcoreapp2.2\BusinessLogicLayer.deps.json
-C:\Users\Ivan\RiderProjects\WatchWithMeCore\BusinessLogicLayer\bin\Debug\netcoreapp2.2\BusinessLogicLayer.runtimeconfig.json
-C:\Users\Ivan\RiderProjects\WatchWithMeCore\BusinessLogicLayer\bin\Debug\netcoreapp2.2\BusinessLogicLayer.runtimeconfig.dev.json
 C:\Users\Ivan\RiderProjects\WatchWithMeCore\BusinessLogicLayer\bin\Debug\netcoreapp2.2\BusinessLogicLayer.dll
 C:\Users\Ivan\RiderProjects\WatchWithMeCore\BusinessLogicLayer\bin\Debug\netcoreapp2.2\BusinessLogicLayer.pdb
 C:\Users\Ivan\RiderProjects\WatchWithMeCore\BusinessLogicLayer\bin\Debug\netcoreapp2.2\DataAccessLayer.dll

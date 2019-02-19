@@ -23,21 +23,6 @@ namespace DataAccessLayer.UnitOfWork
 
             _repositoryService.DbContext = _dbContext;
         }
-//        public UnitOfWork()
-//        {
-//            if (_dbContext == null)
-//            {
-//                _dbContext = new DatabaseContext();
-//            }
-//
-//            if (_repositoryService == null)
-//            {
-//                _repositoryService = new RepositoryServiceImpl();
-//            }
-//
-//            _repositoryService.DbContext = _dbContext;
-//        }
-
         int IUnitOfWork.Save()
         {
             return _dbContext.SaveChanges();
