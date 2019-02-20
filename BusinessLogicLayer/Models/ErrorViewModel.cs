@@ -1,6 +1,4 @@
-using System;
-
-namespace PresentationLayer.Models
+namespace BusinessLogicLayer.Models
 {
     public class ErrorViewModel
     {
