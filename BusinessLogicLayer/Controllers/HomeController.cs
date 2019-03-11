@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using BusinessLogicLayer.Domains;
 using BusinessLogicLayer.EF;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BusinessLogicLayer.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly DatabaseContext _context;
@@ -16,6 +18,12 @@ namespace BusinessLogicLayer.Controllers
             _context = context;
         }
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult<List<User>> GetAllUsers()
         {
             
             using (IUnitOfWork uow = new UnitOfWork(_context))
@@ -27,11 +35,11 @@ namespace BusinessLogicLayer.Controllers
 //                uow.GetRepository<User>().Add(new User{Login = "Ivan", Password = "qwerty"});
 //                uow.Save();
                 var users = uow.GetRepository<User>().GetAll().ToList();
-                var rooms = uow.GetRepository<Room>().GetAll().ToList();
+//                var rooms = uow.GetRepository<Room>().GetAll().ToList();
                 //var rooms2 = uow.GetRepository<Room>().GetAll(x=>x.Name == "Столовая", q=>q.OrderBy(d=>d.Id), includeProperties: "Users").ToList();
-                
+                return Ok(users);
             }
-            return View();
+           
         }
 
         public IActionResult Privacy()

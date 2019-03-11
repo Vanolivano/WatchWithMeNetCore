@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{9681290A-D5E4-4752-90FD-A8E48224E691}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayerAngular", "PresentationLayerAngular\PresentationLayerAngular.csproj", "{F330386E-EAA9-403F-A8CD-14E7A082B446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{9681290A-D5E4-4752-90FD-A8E48224E691}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9681290A-D5E4-4752-90FD-A8E48224E691}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9681290A-D5E4-4752-90FD-A8E48224E691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
