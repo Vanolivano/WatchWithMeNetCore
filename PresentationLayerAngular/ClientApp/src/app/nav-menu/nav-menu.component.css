@@ -12,7 +12,15 @@ html {
     font-size: 16px;
   }
 }
-
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+.border-bottom {
+  margin-bottom: 0 !important;
+  border-bottom: 0 !important;
+}
+.navbar{
+  padding: 0.4em 1em;
+  margin: 0 0 0 0;
+  background:  linear-gradient(to bottom, #4c4a47 1%, #353531 100%);
 }

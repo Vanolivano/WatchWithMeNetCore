@@ -3,13 +3,16 @@
   height: 600px;
   text-align: center;
   color: #ffffff;
-  background-image: url('./images/fon.jpg');
+  background-image: url('./images/fon3.jpg');
+  background-size: auto;
+  position: fixed;
 }
 .body-lobby-create-room{
   position: relative;
   background-color: rgba(76,74,71,0.4);
   border: 1px solid #5f5f5f;
   width: 60%;
+  max-width: 560px;
   border-radius: .2857rem;
   text-align: center;
   display: inline-block;

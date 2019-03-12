@@ -27,7 +27,7 @@ import {RoomComponent} from "./room/room.component";
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'home', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'lobby', component: LobbyComponent },
