@@ -26,6 +26,7 @@
         <Content Include="ClientApp\src\app\lobby\lobby.component.css" />
         <Content Include="ClientApp\src\app\lobby\lobby.component.html" />
         <Content Include="ClientApp\src\app\lobby\lobby.component.ts" />
+        <Content Include="ClientApp\src\app\room\room.component.css" />
         <Content Include="ClientApp\src\app\room\room.component.html" />
         <Content Include="ClientApp\src\app\room\room.component.ts" />
         <None Remove="$(SpaRoot)**" />
