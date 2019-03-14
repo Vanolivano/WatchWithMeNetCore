@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import {LobbyComponent} from "./lobby/lobby.component";
-import {RoomComponent} from "./room/room.component";
+import {RoomComponent, SafePipe} from "./room/room.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import {RoomComponent} from "./room/room.component";
     CounterComponent,
     FetchDataComponent,
     LobbyComponent,
-    RoomComponent
+    RoomComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
