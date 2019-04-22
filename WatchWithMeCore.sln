@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{9681290A-D5E4-4752-90FD-A8E48224E691}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayerAngular", "PresentationLayerAngular\PresentationLayerAngular.csproj", "{F330386E-EAA9-403F-A8CD-14E7A082B446}"
 EndProject
 Global
@@ -22,10 +20,6 @@ Global
 		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91B67FDE-06BF-4EBC-A1E4-6BBA387E3E4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9681290A-D5E4-4752-90FD-A8E48224E691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9681290A-D5E4-4752-90FD-A8E48224E691}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9681290A-D5E4-4752-90FD-A8E48224E691}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9681290A-D5E4-4752-90FD-A8E48224E691}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F330386E-EAA9-403F-A8CD-14E7A082B446}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -17,10 +17,10 @@ namespace BusinessLogicLayer.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+//        public IActionResult Index()
+//        {
+//            return View();
+//        }
 
         [HttpGet]
         public ActionResult<List<User>> GetAllUsers()
@@ -42,10 +42,10 @@ namespace BusinessLogicLayer.Controllers
            
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+//        public IActionResult Privacy()
+//        {
+//            return View();
+//        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
