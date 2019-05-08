@@ -11,6 +11,6 @@ namespace BusinessLogicLayer.AreaServices.UserService
     /// </summary>
     public interface IUserAreaService
     {
-        List<User> GetUsers();
+        List<AppUser> GetUsers();
     }
 }

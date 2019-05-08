@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using BusinessLogicLayer.Domains;
+using BusinessLogicLayer.EF;
+using DataAccessLayer.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BusinessLogicLayer.Controllers
@@ -8,6 +11,11 @@ namespace BusinessLogicLayer.Controllers
     [Route("api/[controller]")]
     public class ApiTestController : Controller
     {
+        private readonly DatabaseContext _context;
+        public ApiTestController(DatabaseContext context)
+        {
+            _context = context;
+        }
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

@@ -23,21 +23,21 @@ namespace BusinessLogicLayer.Controllers
 //        }
 
         [HttpGet]
-        public ActionResult<List<User>> GetAllUsers()
+        public ActionResult<List<AppUser>> GetAllUsers()
         {
             
             using (IUnitOfWork uow = new UnitOfWork(_context))
             {
-//                uow.GetRepository<Room>().Add(new Room{Name = "Столовая"});
-//                uow.GetRepository<Room>().Add(new Room{Name = "Кухня"});
+                uow.GetRepository<Room>().Add(new Room{Name = "Столовая"});
+                uow.GetRepository<Room>().Add(new Room{Name = "Кухня"});
 //                uow.GetRepository<Room>().Add(new Room());
 //                uow.GetRepository<User>().Add(new User{Login = "Vano", Password = "12123123", RoomId = 1});
 //                uow.GetRepository<User>().Add(new User{Login = "Ivan", Password = "qwerty"});
-//                uow.Save();
-                var users = uow.GetRepository<User>().GetAll().ToList();
-//                var rooms = uow.GetRepository<Room>().GetAll().ToList();
+                uow.Save();
+//                var users = uow.GetRepository<Customer>().GetAll().ToList();
+                var rooms = uow.GetRepository<Room>().GetAll().ToList();
                 //var rooms2 = uow.GetRepository<Room>().GetAll(x=>x.Name == "Столовая", q=>q.OrderBy(d=>d.Id), includeProperties: "Users").ToList();
-                return Ok(users);
+                return Ok(rooms);
             }
            
         }

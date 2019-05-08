@@ -19,10 +19,10 @@ namespace BusinessLogicLayer.AreaServices.UserService.Impl
             _unitOfWork = unitOfWork;
             _userFactory = userFactory;
         }
-        public List<User> GetUsers()
+        public List<AppUser> GetUsers()
         {
             //берет пользователей из базы
-            var users = _unitOfWork.GetRepository<User>().GetAll().ToList();
+            var users = _unitOfWork.GetRepository<AppUser>().GetAll().ToList();
             //отправляет на обработку в userFactory для какой либо бизнесс-логики если это нужно
             return _userFactory.GetUsers(users);
         }

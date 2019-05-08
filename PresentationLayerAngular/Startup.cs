@@ -1,9 +1,11 @@
 using System.Reflection;
+using BusinessLogicLayer.EF;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +23,9 @@ namespace PresentationLayerAngular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DatabaseContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("WatchWithMeDb"),
+                    b => b.MigrationsAssembly("PresentationLayerAngular")));
             services.AddMvc()
                 .AddApplicationPart(Assembly.Load("BusinessLogicLayer"))
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

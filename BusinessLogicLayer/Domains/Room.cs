@@ -6,7 +6,8 @@ namespace BusinessLogicLayer.Domains
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Status { get; set; }
         
-        public List<User> Users { get; set; }
+        public List<Customer> Users { get; set; }
     }
 }
