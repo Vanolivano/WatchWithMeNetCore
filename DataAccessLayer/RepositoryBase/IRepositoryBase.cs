@@ -19,6 +19,7 @@ namespace DataAccessLayer.RepositoryBase
 
         Task<T> FindByASync(Expression<Func<T, bool>> predicate, string includeProperties = "");
         void Add(T toAdd);
+        void AddAsync(T toAdd);
 
         void AddOrUpdate(T toAddOrUpdate);
 

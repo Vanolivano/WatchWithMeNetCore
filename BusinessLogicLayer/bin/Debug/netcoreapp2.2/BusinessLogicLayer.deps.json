@@ -1,17 +1,71 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "287d7a31b42b87b055a1c1ff4189ab3b977bf62d"
+    "signature": "0ef2411bf149f473c5e83156950704913988eb83"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "BusinessLogicLayer/1.0.0": {
         "dependencies": {
-          "DataAccessLayer": "1.0.0"
+          "AutoMapper": "8.1.0",
+          "DataAccessLayer": "1.0.0",
+          "FluentValidation": "8.5.0-preview1",
+          "FluentValidation.AspNetCore": "8.5.0-preview1",
+          "FluentValidation.ValidatorAttribute": "8.4.0"
         },
         "runtime": {
           "BusinessLogicLayer.dll": {}
+        }
+      },
+      "AutoMapper/8.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "FluentValidation/8.5.0-preview1": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.0.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/8.5.0-preview1": {
+        "dependencies": {
+          "FluentValidation": "8.5.0-preview1",
+          "FluentValidation.DependencyInjectionExtensions": "8.5.0-preview1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/8.5.0-preview1": {
+        "dependencies": {
+          "FluentValidation": "8.5.0-preview1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.0.0"
+          }
+        }
+      },
+      "FluentValidation.ValidatorAttribute/8.4.0": {
+        "dependencies": {
+          "FluentValidation": "8.5.0-preview1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.4.0.0"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore/2.2.2": {
@@ -142,6 +196,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YyGENUyP7CdOJcw2TCEMtkuRgj9iRFLHeACrfBEDPY5xIiTB/iDxNFdOy5br4abWR8KnSdQeK/x+GQLE7uiFtQ==",
+      "path": "automapper/8.1.0",
+      "hashPath": "automapper.8.1.0.nupkg.sha512"
+    },
+    "FluentValidation/8.5.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OMSa9QBkAue9ZsZAinAiFA9Riykoe49+FNF8Nsdz8pb0T+DjkbUJEJMssdZqosr3ap5QNsN5dbHXD3txvu0vuA==",
+      "path": "fluentvalidation/8.5.0-preview1",
+      "hashPath": "fluentvalidation.8.5.0-preview1.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/8.5.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+IPn2tucWEyQCl6XKJuaQevYQDbRhAd5Ua/WIeW2ktSaBxlQLoiL/ms5XX4I4T01NZ5qJNGzKWdprsglc9ZvQw==",
+      "path": "fluentvalidation.aspnetcore/8.5.0-preview1",
+      "hashPath": "fluentvalidation.aspnetcore.8.5.0-preview1.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/8.5.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NpKfIM0w+pmPiEPTtY6thjZ8AAwkSYBHs+zvtkBRkT0bGDMs7nk6KmejTm9N1znVimWkULcHCbOA6+eaP3Kz8A==",
+      "path": "fluentvalidation.dependencyinjectionextensions/8.5.0-preview1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.8.5.0-preview1.nupkg.sha512"
+    },
+    "FluentValidation.ValidatorAttribute/8.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/QZEK+7Dj1u/kHt9GIfYU2CahySLUdQJ95yOkW0KFXy2KpNUOLBn1o2Wq67QTvxQAloLMzM/jez+iOixilMKzg==",
+      "path": "fluentvalidation.validatorattribute/8.4.0",
+      "hashPath": "fluentvalidation.validatorattribute.8.4.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/2.2.2": {
       "type": "package",

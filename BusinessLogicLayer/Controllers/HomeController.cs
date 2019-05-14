@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using BusinessLogicLayer.Domains;
 using BusinessLogicLayer.EF;
-using BusinessLogicLayer.Models;
+using BusinessLogicLayer.ViewModels;
 using DataAccessLayer.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
