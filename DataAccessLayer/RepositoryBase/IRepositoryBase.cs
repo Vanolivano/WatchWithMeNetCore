@@ -28,6 +28,8 @@ namespace DataAccessLayer.RepositoryBase
         void Delete(int id);
 
         void Delete(T entity);
+        
+        
 //        IEnumerable<T> ReadAll();
 //        T Read(int id);
 //        void Create(T item);

@@ -7,6 +7,7 @@ using BusinessLogicLayer.ViewModels;
 using DataAccessLayer.UnitOfWork;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+// ReSharper disable All
 
 namespace BusinessLogicLayer.Controllers
 {
@@ -34,7 +35,7 @@ namespace BusinessLogicLayer.Controllers
                 return BadRequest(ModelState);
             }
 
-            var userIdentity = _mapper.Map<AppUser>(model);
+            AppUser userIdentity = _mapper.Map<AppUser>(model);
 
             var result = await _userManager.CreateAsync(userIdentity, model.Password);
 
