@@ -1,15 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@media (min-width: 1600px){
-  .container {
-    max-width: 1600px;
-  }
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+    padding-top: 3.5rem;
 }
-@media (min-width: 1920px){
-  .container {
-    max-width: 1920px;
-  }
-}
-.container{
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  
+/*
+ * Typography
+ */
+  
+h1 {
+    padding-bottom: 9px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }

@@ -23,6 +23,45 @@
     <ItemGroup>
         <!-- Don't publish the SPA source files, but do show them in the project files list -->
         <Content Remove="$(SpaRoot)**" />
+        <Content Include="ClientApp\src\app\account\account.routing.ts" />
+        <Content Include="ClientApp\src\app\account\account.module.ts" />
+        <Content Include="ClientApp\src\app\account\facebook-login\facebook-login.component.css" />
+        <Content Include="ClientApp\src\app\account\facebook-login\facebook-login.component.html" />
+        <Content Include="ClientApp\src\app\account\facebook-login\facebook-login.component.spec.ts" />
+        <Content Include="ClientApp\src\app\account\facebook-login\facebook-login.component.ts" />
+        <Content Include="ClientApp\src\app\account\login-form\login-form.component.css" />
+        <Content Include="ClientApp\src\app\account\login-form\login-form.component.html" />
+        <Content Include="ClientApp\src\app\account\login-form\login-form.component.spec.ts" />
+        <Content Include="ClientApp\src\app\account\login-form\login-form.component.ts" />
+        <Content Include="ClientApp\src\app\account\registration-form\registration-form.component.css" />
+        <Content Include="ClientApp\src\app\account\registration-form\registration-form.component.html" />
+        <Content Include="ClientApp\src\app\account\registration-form\registration-form.component.spec.ts" />
+        <Content Include="ClientApp\src\app\account\registration-form\registration-form.component.ts" />
+        <Content Include="ClientApp\src\app\app.routing.ts" />
+        <Content Include="ClientApp\src\app\auth.guard.ts" />
+        <Content Include="ClientApp\src\app\authenticate-xhr.backend.ts" />
+        <Content Include="ClientApp\src\app\dashboard\dashboard.routing.ts" />
+        <Content Include="ClientApp\src\app\dashboard\dashboard.module.ts" />
+        <Content Include="ClientApp\src\app\dashboard\home\home.component.css" />
+        <Content Include="ClientApp\src\app\dashboard\home\home.component.html" />
+        <Content Include="ClientApp\src\app\dashboard\home\home.component.spec.ts" />
+        <Content Include="ClientApp\src\app\dashboard\home\home.component.ts" />
+        <Content Include="ClientApp\src\app\dashboard\models\home.details.interface.ts" />
+        <Content Include="ClientApp\src\app\dashboard\root\root.component.css" />
+        <Content Include="ClientApp\src\app\dashboard\root\root.component.html" />
+        <Content Include="ClientApp\src\app\dashboard\root\root.component.spec.ts" />
+        <Content Include="ClientApp\src\app\dashboard\root\root.component.ts" />
+        <Content Include="ClientApp\src\app\dashboard\services\dashboard.service.ts" />
+        <Content Include="ClientApp\src\app\dashboard\settings\settings.component.css" />
+        <Content Include="ClientApp\src\app\dashboard\settings\settings.component.html" />
+        <Content Include="ClientApp\src\app\dashboard\settings\settings.component.spec.ts" />
+        <Content Include="ClientApp\src\app\dashboard\settings\settings.component.ts" />
+        <Content Include="ClientApp\src\app\directives\email.validator.directive.ts" />
+        <Content Include="ClientApp\src\app\directives\focus.directive.ts" />
+        <Content Include="ClientApp\src\app\header\header.component.css" />
+        <Content Include="ClientApp\src\app\header\header.component.html" />
+        <Content Include="ClientApp\src\app\header\header.component.spec.ts" />
+        <Content Include="ClientApp\src\app\header\header.component.ts" />
         <Content Include="ClientApp\src\app\lobby\images\fon.jpg">
           <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </Content>
@@ -32,6 +71,18 @@
         <Content Include="ClientApp\src\app\room\room.component.css" />
         <Content Include="ClientApp\src\app\room\room.component.html" />
         <Content Include="ClientApp\src\app\room\room.component.ts" />
+        <Content Include="ClientApp\src\app\rxjs-operators.js" />
+        <Content Include="ClientApp\src\app\shared\models\credentials.interface.ts" />
+        <Content Include="ClientApp\src\app\shared\models\user.registration.interface.ts" />
+        <Content Include="ClientApp\src\app\shared\modules\shared.module.ts" />
+        <Content Include="ClientApp\src\app\shared\services\base.service.ts" />
+        <Content Include="ClientApp\src\app\shared\services\user.service.ts" />
+        <Content Include="ClientApp\src\app\shared\utils\config.service.ts" />
+        <Content Include="ClientApp\src\app\spinner\spinner.component.css" />
+        <Content Include="ClientApp\src\app\spinner\spinner.component.html" />
+        <Content Include="ClientApp\src\app\spinner\spinner.component.spec.ts" />
+        <Content Include="ClientApp\src\app\spinner\spinner.component.ts" />
+        <Content Include="ClientApp\src\facebook-auth.html" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     </ItemGroup>
