@@ -3,12 +3,17 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using AutoMapper;
+using BusinessLogicLayer.AreaServices.UserService;
+using BusinessLogicLayer.AreaServices.UserService.Impl;
+using BusinessLogicLayer.AreaServices.UserService.UserFactory;
+using BusinessLogicLayer.AreaServices.UserService.UserFactory.Impl;
 using BusinessLogicLayer.Auth;
 using BusinessLogicLayer.Domains;
 using BusinessLogicLayer.EF;
 using BusinessLogicLayer.Extensions;
 using BusinessLogicLayer.Helpers;
 using BusinessLogicLayer.Models;
+using DataAccessLayer.UnitOfWork;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -39,10 +44,14 @@ namespace PresentationLayerAngular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("WatchWithMeDb"),
                     b => b.MigrationsAssembly("PresentationLayerAngular")));
-            
+
+            services.AddUser();
+            services.AddScoped<DbContext, DatabaseContext>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddSingleton<IJwtFactory, JwtFactory>();
 
             // Register the ConfigurationBuilder instance of FacebookAuthSettings
@@ -53,7 +62,7 @@ namespace PresentationLayerAngular
             // jwt wire up
             // Get options from app settings
             var jwtAppSettingOptions = Configuration.GetSection(nameof(JwtIssuerOptions));
-            
+
             // Configure JwtIssuerOptions
             services.Configure<JwtIssuerOptions>(options =>
             {
@@ -77,7 +86,7 @@ namespace PresentationLayerAngular
                 ValidateLifetime = true,
                 ClockSkew = TimeSpan.Zero
             };
-            
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -89,8 +98,8 @@ namespace PresentationLayerAngular
                 configureOptions.TokenValidationParameters = tokenValidationParameters;
                 configureOptions.SaveToken = true;
             });
-            
-            
+
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("ApiUser", policy => policy.RequireClaim(Constants.Strings.JwtClaimIdentifiers.Rol, Constants.Strings.JwtClaims.ApiAccess));
@@ -110,9 +119,9 @@ namespace PresentationLayerAngular
             builder.AddEntityFrameworkStores<DatabaseContext>().AddDefaultTokenProviders();
 
             services.AddAutoMapper();
-            
-            
-            
+
+
+
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>())
                 .AddApplicationPart(Assembly.Load("BusinessLogicLayer"))
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -134,7 +143,7 @@ namespace PresentationLayerAngular
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+
             app.UseExceptionHandler(
                 builder =>
                 {

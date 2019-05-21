@@ -9,7 +9,7 @@ namespace DataAccessLayer.UnitOfWork
     public class UnitOfWork: IUnitOfWork
     {
         private readonly DbContext _dbContext;
-        
+
         private readonly IRepositoryService _repositoryService;
 
         public UnitOfWork(DbContext dbContext)
