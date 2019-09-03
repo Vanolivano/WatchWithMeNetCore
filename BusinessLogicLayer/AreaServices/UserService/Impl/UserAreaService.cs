@@ -26,13 +26,14 @@ namespace BusinessLogicLayer.AreaServices.UserService.Impl
             try
             {
                 List<AppUser> users = _uow.GetRepository<AppUser>().GetAll().ToList();
-                return _userFactory.GetUsers(users);
+                //отправляет на обработку в userFactory для какой либо бизнесс-логики если это нужно
+                return _userFactory.OrderUsers(users);
             }
             finally
             {
-                _uow.Dispose();
+                _uow?.Dispose();
             }
-            //отправляет на обработку в userFactory для какой либо бизнесс-логики если это нужно
+
 
         }
     }

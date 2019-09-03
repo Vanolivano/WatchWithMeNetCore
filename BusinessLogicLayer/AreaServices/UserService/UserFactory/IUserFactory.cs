@@ -9,6 +9,6 @@ namespace BusinessLogicLayer.AreaServices.UserService.UserFactory
     /// </summary>
     public interface IUserFactory
     {
-        List<AppUser> GetUsers(List<AppUser> users);
+        List<AppUser> OrderUsers(List<AppUser> users);
     }
 }

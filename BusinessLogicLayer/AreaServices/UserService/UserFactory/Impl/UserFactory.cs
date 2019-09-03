@@ -10,7 +10,7 @@ namespace BusinessLogicLayer.AreaServices.UserService.UserFactory.Impl
     /// </summary>
     public class UserFactory: IUserFactory
     {
-        public List<AppUser> GetUsers(List<AppUser> users)
+        public List<AppUser> OrderUsers(List<AppUser> users)
         {
             return users.OrderBy(o => o.FacebookId).ToList();
         }
