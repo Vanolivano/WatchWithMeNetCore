@@ -17,4 +17,23 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.1.0-preview1-final" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="ContextBase\ContextBaseImpl.cs" />
+      <Compile Remove="ContextBase\**" />
+      <Compile Remove="RepositoryContext\**" />
+      <Compile Remove="UnitOfWorkContext\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ContextBase\**" />
+      <EmbeddedResource Remove="RepositoryContext\**" />
+      <EmbeddedResource Remove="UnitOfWorkContext\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ContextBase\**" />
+      <None Remove="RepositoryContext\**" />
+      <None Remove="UnitOfWorkContext\**" />
+    </ItemGroup>
+
 </Project>

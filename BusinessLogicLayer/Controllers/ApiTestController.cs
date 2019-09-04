@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
+using BusinessLogicLayer.AreaServices.UserService;
 using BusinessLogicLayer.Domains;
 using BusinessLogicLayer.EF;
 using DataAccessLayer.UnitOfWork;
@@ -11,10 +13,12 @@ namespace BusinessLogicLayer.Controllers
     [Route("api/[controller]")]
     public class ApiTestController : Controller
     {
-        private readonly DatabaseContext _context;
-        public ApiTestController(DatabaseContext context)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUserAreaService _userService;
+        public ApiTestController(IUnitOfWork unitOfWork, IUserAreaService userService)
         {
-            _context = context;
+            _userService = userService;
+            _unitOfWork = unitOfWork;
         }
         private static string[] Summaries = new[]
         {
@@ -24,6 +28,8 @@ namespace BusinessLogicLayer.Controllers
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
+            var qweqw = _userService.GetUsers();
+            var users = _unitOfWork.GetRepository<Room>().GetAll(x=>x.Id > 0).ToList();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

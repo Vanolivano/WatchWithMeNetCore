@@ -1,10 +1,13 @@
 using System.Reflection;
+using BusinessLogicLayer.AreaServices.UserService;
+using BusinessLogicLayer.AreaServices.UserService.Impl;
+using BusinessLogicLayer.AreaServices.UserService.UserFactory;
+using BusinessLogicLayer.AreaServices.UserService.UserFactory.Impl;
 using BusinessLogicLayer.EF;
+using DataAccessLayer.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +35,10 @@ namespace PresentationLayerAngular
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
+            services.AddScoped<DbContext, DatabaseContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUserAreaService, UserAreaService>();
+            services.AddScoped<IUserFactory, UserFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

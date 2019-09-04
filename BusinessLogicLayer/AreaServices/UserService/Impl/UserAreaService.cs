@@ -24,7 +24,7 @@ namespace BusinessLogicLayer.AreaServices.UserService.Impl
             //берет пользователей из базы
             var users = _unitOfWork.GetRepository<AppUser>().GetAll().ToList();
             //отправляет на обработку в userFactory для какой либо бизнесс-логики если это нужно
-            return _userFactory.GetUsers(users);
+            return _userFactory.OrderingUsers(users);
         }
     }
 }
