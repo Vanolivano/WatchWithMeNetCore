@@ -73,6 +73,11 @@ namespace DataAccessLayer.RepositoryBase
             _dataBaseContext.Set<T>().Add(toAdd);
         }
 
+        public async void AddAsync(T toAdd)
+        {
+            await _dataBaseContext.Set<T>().AddAsync(toAdd);
+        }
+
         public void AddOrUpdate(T toAddOrUpdate)
         {
             var entry = _dataBaseContext.Entry(toAddOrUpdate);  
