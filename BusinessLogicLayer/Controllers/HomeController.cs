@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using BusinessLogicLayer.Domains;
 using BusinessLogicLayer.EF;
-using BusinessLogicLayer.ViewModels;
 using DataAccessLayer.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,12 +10,11 @@ namespace BusinessLogicLayer.Controllers
 
     public class HomeController : Controller
     {
-        private readonly DatabaseContext _context;
         private readonly IUnitOfWork _unitOfWork;
-        public HomeController(DatabaseContext context, IUnitOfWork unitOfWork)
+
+        public HomeController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _context = context;
         }
 
         [HttpGet]
@@ -35,11 +32,5 @@ namespace BusinessLogicLayer.Controllers
             return Ok(rooms);
         }
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
-        }
     }
 }
